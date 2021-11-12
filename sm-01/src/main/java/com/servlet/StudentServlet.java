@@ -7,14 +7,12 @@ import com.service.StudentService;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import javax.crypto.interfaces.PBEKey;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 /**
@@ -52,7 +50,6 @@ public class StudentServlet extends HttpServlet {
 //        1.2 转换为json对象并输出
         response.getWriter().println(JSON.toJSONString(students));
         response.getWriter().flush();
-
 
     }
 }

@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>sm-01</module>
+        <module>sm-02-1</module>
     </modules>
 
     <properties>
