@@ -11,6 +11,9 @@
     <modules>
         <module>sm-01</module>
         <module>sm-02-1</module>
+        <module>sm-03</module>
+        <module>sm-03-1</module>
+        <module>ssm-01</module>
     </modules>
 
     <properties>
