@@ -5,7 +5,7 @@
 
 <!--    第一步：创建对象的三种方式-->
 <!--    1. 构造出一个名为stud01的学生对象-->
-    <bean id="stud01" class="com.pojo.Student"/>
+    <bean id="stud01" class="com.exp.pojo.Student"/>
 
 <!--    2. 通过静态工厂获取对象-->
     <bean id="stud02" class="com.factory.StudentFactory" factory-method="getInstance"/>
@@ -17,7 +17,7 @@
 <!--    第二部分：为对象设置值-->
 
 <!--    2.1 赋值的第一种方法：使用setter方法赋值-->
-    <bean id="stud11" class="com.pojo.Student">
+    <bean id="stud11" class="com.exp.pojo.Student">
        <property name="sid" value="1001"/>
         <property name="name" value="张三"/>
         <property name="sex" value="男"/>
@@ -27,7 +27,7 @@
     </bean>
 
 <!--    2.2 使用构造方法赋值-->
-    <bean id="stud12" class="com.pojo.Student">
+    <bean id="stud12" class="com.exp.pojo.Student">
         <constructor-arg name="sid" value="1002"/>
         <constructor-arg name="name" value="张三"/>
         <constructor-arg name="sex" value="男"/>
@@ -37,12 +37,12 @@
     </bean>
 
 <!--    2.3使用p名称空间赋值-->
-    <bean id="stud13" class="com.pojo.Student"
+    <bean id="stud13" class="com.exp.pojo.Student"
      p:sid="1003" p:name="王五" p:sex="男" p:addr="南京" p:age="20" p:cid="2"
     />
 
 <!--    3. 为复杂属性赋值 -->
-    <bean id="cd" class="com.pojo.CollectionBeans">
+    <bean id="cd" class="com.exp.pojo.CollectionBeans">
         <property name="books">
             <array>
                 <value>《嗓音有》</value>

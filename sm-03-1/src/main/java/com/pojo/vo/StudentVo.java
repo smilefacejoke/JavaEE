@@ -1,4 +1,4 @@
-package com.pojo.vo;
+package com.exp.pojo.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

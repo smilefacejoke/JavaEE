@@ -1,9 +1,9 @@
 package com.servlet;
 
 import com.alibaba.fastjson.JSON;
-import com.pojo.Class;
-import com.pojo.R;
-import com.service.ClassService;
+import com.exp.pojo.Class;
+import com.exp.pojo.R;
+import com.exp.service.ClassService;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 

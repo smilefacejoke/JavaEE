@@ -1,6 +1,6 @@
 package com.factory;
 
-import com.pojo.Student;
+import com.exp.pojo.Student;
 
 /**
  * @author 54350

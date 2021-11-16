@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    1. 加载属性文件-->
+    <context:property-placeholder location="classpath*:properties/jdbc.properties"/>
+<!--    2. 指定包扫描-->
+    <context:component-scan base-package="com.exp"/>
+<!--    3. 定义数据源-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="name" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
+<!--    4. 定义sqlSessionFactorBean-->
+    <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="typeAliasesPackage" value="com.exp.pojo"/>
+        <property name="mapperLocations" value="classpath*:/mapper/StudentMapper.xml"/>
+        <property name="plugins">
+            <bean class="com.github.pagehelper.PageInterceptor"/>
+        </property>
+    </bean>
+
+<!--    5. 配置MapperScannerConfigurer-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.exp.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"/>
+    </bean>
+
+
+
+</beans>

@@ -1,7 +1,7 @@
-package com.mapper;
+package com.exp.mapper;
 
-import com.pojo.Class;
-import com.pojo.ClassExample;
+import com.exp.pojo.Class;
+import com.exp.pojo.ClassExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -7,7 +7,7 @@
 <!--    1. 加载属性文件-->
         <context:property-placeholder location="classpath*:properties/jdbc.properties"/>
 <!--    2. 加载指定包的四个注解（@Repository,@Service,@Controller,@Component)-->
-        <context:component-scan base-package="com.pojo com.mapper com.service com.servlet"/>
+        <context:component-scan base-package="com.exp.pojo com.exp.mapper com.exp.service com.servlet"/>
 <!--        3. 配置数据源-->
         <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
             <property name="driverClassName" value="${db.driver}"/>
@@ -19,7 +19,7 @@
         <bean class="org.mybatis.spring.SqlSessionFactoryBean">
             <property name="dataSource" ref="dataSource"/>
             <property name="mapperLocations" value="classpath*:mapper/*.xml"/>
-            <property name="typeAliasesPackage" value="com.pojo"/>
+            <property name="typeAliasesPackage" value="com.exp.pojo"/>
 <!--            分页插件-->
             <property name="plugins">
                 <array>
@@ -37,7 +37,7 @@
             2：将代理类对象放到spring容器中
 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-            <property name="basePackage" value="com.mapper"/>
+            <property name="basePackage" value="com.exp.mapper"/>
     </bean>
 
 

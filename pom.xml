@@ -13,8 +13,9 @@
         <module>sm-02-1</module>
         <module>sm-03</module>
         <module>sm-03-1</module>
-        <module>ssm-01</module>
+        <module>ssm-02</module>
     </modules>
+
 
     <properties>
         <spring-version>5.3.10</spring-version>
@@ -102,21 +103,21 @@
             <version>5.3.10</version>
         </dependency>
 
-<!--        2. 引入mysql-->
+        <!--        2. 引入mysql-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql-version}</version>
         </dependency>
 
-<!--        3. 引入mybatis依赖-->
+        <!--        3. 引入mybatis依赖-->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>${mybatis}</version>
         </dependency>
 
-<!--        4. 引入分页插件-->
+        <!--        4. 引入分页插件-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>

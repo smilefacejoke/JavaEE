@@ -1,8 +1,8 @@
-package com.service;
+package com.exp.service;
 
 import com.github.pagehelper.PageInfo;
-import com.pojo.Student;
-import com.pojo.vo.StudentVo;
+import com.exp.pojo.Student;
+import com.exp.pojo.vo.StudentVo;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.service;
+package com.exp.service;
 
-import com.pojo.Class;
+import com.exp.pojo.Class;
 
 import java.util.List;
 

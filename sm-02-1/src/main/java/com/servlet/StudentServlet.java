@@ -3,10 +3,10 @@ package com.servlet;
 import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageInfo;
-import com.pojo.Student;
-import com.pojo.vo.StudentVo;
-import com.service.R;
-import com.service.StudentService;
+import com.exp.pojo.Student;
+import com.exp.pojo.vo.StudentVo;
+import com.exp.service.R;
+import com.exp.service.StudentService;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 

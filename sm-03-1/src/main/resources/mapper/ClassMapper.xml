@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mapper.ClassMapper">
-  <resultMap id="BaseResultMap" type="com.pojo.Class">
+<mapper namespace="com.exp.mapper.ClassMapper">
+  <resultMap id="BaseResultMap" type="com.exp.pojo.Class">
     <id column="cid" jdbcType="INTEGER" property="cid" />
     <result column="cname" jdbcType="VARCHAR" property="cname" />
   </resultMap>
@@ -66,7 +66,7 @@
   <sql id="Base_Column_List">
     cid, cname
   </sql>
-  <select id="selectByExample" parameterType="com.pojo.ClassExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.exp.pojo.ClassExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -90,17 +90,17 @@
     delete from class
     where cid = #{cid,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.pojo.ClassExample">
+  <delete id="deleteByExample" parameterType="com.exp.pojo.ClassExample">
     delete from class
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.pojo.Class">
+  <insert id="insert" parameterType="com.exp.pojo.Class">
     insert into class (cid, cname)
     values (#{cid,jdbcType=INTEGER}, #{cname,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.pojo.Class">
+  <insert id="insertSelective" parameterType="com.exp.pojo.Class">
     insert into class
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="cid != null">
@@ -119,7 +119,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.pojo.ClassExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.exp.pojo.ClassExample" resultType="java.lang.Long">
     select count(*) from class
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -147,7 +147,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.pojo.Class">
+  <update id="updateByPrimaryKeySelective" parameterType="com.exp.pojo.Class">
     update class
     <set>
       <if test="cname != null">
@@ -156,7 +156,7 @@
     </set>
     where cid = #{cid,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.pojo.Class">
+  <update id="updateByPrimaryKey" parameterType="com.exp.pojo.Class">
     update class
     set cname = #{cname,jdbcType=VARCHAR}
     where cid = #{cid,jdbcType=INTEGER}

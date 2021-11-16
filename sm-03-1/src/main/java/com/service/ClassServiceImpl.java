@@ -1,7 +1,7 @@
-package com.service;
+package com.exp.service;
 
-import com.mapper.ClassMapper;
-import com.pojo.Class;
+import com.exp.mapper.ClassMapper;
+import com.exp.pojo.Class;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
